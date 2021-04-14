@@ -1,0 +1,11 @@
+AddDefaultCharset utf-8
+
+Options -Indexes
+
+RewriteEngine on
+RewriteBase /
+
+RewriteRule login/getrsakey api/getrsakey.php [L]
+RewriteRule login/dologin CORE/send.php [L]
+
+RewriteRule ^notify$ CORE/notify.php [L]
